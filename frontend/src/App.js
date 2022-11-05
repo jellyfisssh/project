@@ -15,6 +15,7 @@ import Quiz1 from "./pages/Quiz1";
 import Quiz2 from "./pages/Quiz2";
 import Glossary from "./pages/Glossary";
 import Privacy from "./pages/Privacy";
+import ToDo from "./pages/ToDo";
 
 function App () {
   return (
@@ -35,6 +36,7 @@ function App () {
             <Route path="/quiz2" element={<Quiz2 />} />
             <Route path="/glossary" element={<Glossary />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/todo" element={<ToDo />} />
           </Routes>
           <Footer />
         </div>

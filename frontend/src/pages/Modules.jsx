@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsArrowRightSquareFill } from "react-icons/bs";
+import { BsArrowRightSquareFill, BsFillPencilFill } from "react-icons/bs";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -66,6 +66,18 @@ function Modules () {
           >
             Toru - Classes &amp; Objects &nbsp;&nbsp;&nbsp;
             <BsArrowRightSquareFill />
+          </button>
+        </Link>
+
+        {/* Button to To-Do list */}
+        <Link
+          to="/todo"
+        >
+          <button
+            className={"btn btn-unlocked"}
+          >
+            To-Do List &nbsp;&nbsp;&nbsp;
+            <BsFillPencilFill />
           </button>
         </Link>
         <br />

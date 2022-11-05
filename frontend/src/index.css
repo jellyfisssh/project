@@ -449,3 +449,11 @@ Timer Styling
   border: 1px solid #152684;
   color: white;
 }
+
+/* to-do styling */
+.todo {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+}
