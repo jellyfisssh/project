@@ -3,8 +3,9 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Timer from "../components/Timer";
 
-function Quiz2() {
+function Quiz2 () {
   const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
@@ -19,6 +20,7 @@ function Quiz2() {
       <div className="page-content">
         <h1> Tahi - Python Basics</h1>
         <h1> Quiz</h1>
+        <Timer />
         <div className="content-box">
           <div className="heading">
             <p>Content coming soon, watch this space...</p>

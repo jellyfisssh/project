@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { updateUser } from "../features/auth/authSlice";
 import { useDispatch } from "react-redux";
+import Timer from "../components/Timer";
 
-function Quiz1() {
+
+function Quiz1 () {
   const { user } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
@@ -91,6 +93,7 @@ function Quiz1() {
       <div className="page-content">
         <h1> Tahi - Python Basics</h1>
         <h1> Quiz</h1>
+        <Timer />
 
         <div className="content-box">
           {contentCount === 1 && (

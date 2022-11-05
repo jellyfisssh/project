@@ -8,8 +8,6 @@ import { BsArrowLeftSquareFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import Timer from "../components/Timer";
-
 
 function Module1 () {
     const { user } = useSelector((state) => state.auth);
@@ -27,7 +25,7 @@ function Module1 () {
 
 
     const menu = () => {
-        navigate("/modules")
+        navigate("/module1")
     }
 
     const onNext = () => {
@@ -70,8 +68,6 @@ function Module1 () {
                     In this lesson we will be learning about the basic fundamentals <br />
                     in computer programming.
                 </p>
-
-                <Timer />
 
                 <div className="content-box">
                     {contentCount === 1 && (
@@ -174,7 +170,7 @@ function Module1 () {
                                     Back
                                 </button>
                                 <button className="btn btn-big" onClick={menu}>
-                                    Finish
+                                    Start Module 1
                                 </button>
                             </div>
                             <br />

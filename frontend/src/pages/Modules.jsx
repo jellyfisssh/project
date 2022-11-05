@@ -23,7 +23,7 @@ function Modules () {
   var module3Unlocked = false;
 
   if (user && user.progress === 1) {
-    module2Unlocked = true;
+    module1Unlocked = true;
   }
   if (user && user.progress === 2) {
     module2Unlocked = true;
