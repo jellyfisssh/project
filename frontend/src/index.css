@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: #d5f2cf;
+}
+
+a {
+  text-decoration: none;
+  color: #03312e;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #03312e;
+}
+
+h4 {
+  font-weight: 600;
+  color: black;
+  background-color: #e6e6e6;
+  width: 100%;
+  height: 100%;
+  font-size: medium;
+  text-align: left;
+  width: 60%;
+  padding: 1rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link {
+  margin-bottom: 3rem;
+}
+
+.home-list {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 3rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #03312e;
+  margin-bottom: 60px;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li a:hover {
+  color: #777;
+}
+
+.footer {
+  padding: 20px 0;
+  border-top: 1px solid #03312e;
+  margin-top: 60px;
+}
+
+.footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer ul li a:hover {
+  color: #777;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.heading p {
+  color: #828282;
+}
+
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  background: #03312e;
+  color: #e6e6e6;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn-reverse {
+  background: #555;
+  color: whitesmoke;
+  padding: 20px 40px;
+  font-size: 2rem;
+  margin: 0 1rem 1rem;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.btn-big {
+  padding: 20px 40px;
+  font-size: 2rem;
+  margin: 0 1rem 1rem;
+}
+
+.btn-unlocked {
+  width: 400px;
+  height: 65px;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.btn-locked {
+  width: 400px;
+  height: 65px;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  background: #555;
+  color: #e6e6e6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.btn-locked:hover {
+  transform: none;
+}
+
+.btn-quiz {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: #044b7f;
+  border: 3px solid #044b7f;
+}
+
+.btn-quiz-small {
+  padding: 0.5rem;
+  text-align: left;
+  background-color: #044b7f;
+  border: 3px solid #044b7f;
+}
+
+.selected {
+  border: 3px solid greenyellow;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #03312e transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+.content-box {
+  border: 3px solid #03312e;
+  border-radius: 12px;
+  width: 100%;
+  margin: 2rem 0;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quiz-box {
+  background-color: #e6e6e6;
+  width: 67%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid #03312e;
+  border-radius: 12px;
+  margin: 1rem 0 2rem;
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+}
+
+.quiz-input {
+  width: 2rem;
+  margin: 0 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+}
+
+.HeroPicture {
+  width: 100%;
+}
+
+.PromoPicture1 {
+  width: 30%;
+}
+
+.PromoPicture2 {
+  width: 30%;
+}
+
+.PromoPicture3 {
+  width: 30%;
+}
+
+table {
+  border-color: black;
+  width: 100%;
+  background-color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.ImageOne {
+  width: 400px;
+  height: 250px;
+}
+
+.ImageTwo {
+  width: 600px;
+  height: 300px;
+}
+
+.ImageThree {
+  width: 600px;
+  height: auto;
+}
+
+.ImageFour {
+  width: 600px;
+  height: auto;
+}
+
+.ImageFive {
+  width: 600px;
+  height: 300px;
+}
+
+.ImageSix {
+  width: 400px;
+  height: 250px;
+}
+
+.ImageSeven {
+  width: 400px;
+  height: 250px;
+}
+
+.ImageEight {
+  width: 600px;
+  height: auto;
+}
+
+/* 
+Timer Styling
+*/
+
+.app {
+  text-align: center;
+  background-color: #d5f2cf;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.time {
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.button {
+  padding: .6rem 1.5rem;
+  margin: .4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .8rem;
+  border-style: groove;
+}
+
+.button:focus {
+  outline-width: 0;
+}
+
+.button-primary:hover {
+  background-color: #2641d4;
+  border: 1px solid #1b1f2b;
+}
+
+.button-primary-active {
+  background-color: #3151ff;
+  border: 1px solid #152684;
+  color: white;
+}
+
+.button-primary-inactive {
+  background-color: #3151ff;
+  border: 1px solid #152684;
+  color: white;
+}
